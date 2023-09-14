@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="employee.list">
+            <field name="name">Employee List</field>
+            <field name="model">employee.model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="employee_name" />
+                    <field name="phone_number" />
+                    <field name="emp_img" />
+                    <field name="city" />
+                    <field name="work_experience" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="employee.form">
+            <field name="name">employee form</field>
+            <field name="model">employee.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="employee_name" />
+                            <field name="phone_number" />
+                            <field name="emp_img" />
+                            <field name="city" />
+                            <field name="work_experience" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="employee_action" model="ir.actions.act_window">
+            <field name="name">Employee Details </field>
+            <field name="res_model">employee.model</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+
+        <menuitem name="emplyee_details" id="employee.root" action='employee_action' />
+
+
+      
+
+
+    </data>
+</odoo>

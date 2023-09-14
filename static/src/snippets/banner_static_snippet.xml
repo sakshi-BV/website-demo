@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="banner_static_snippet" name="Banner snippet">
+        <section class="s_banner parallax s_parallax_is_fixed pt96 pb96" data-scroll-background-ratio="1">
+            <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website_demo.work_life'); background-position: 50% 0;"/>
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-6 jumbotron rounded o_cc o_cc1 pt32 pb32" data-name="Box">
+                        <h1><font style="font-size: 62px;">Welcome</font></h1>
+                        <p class="lead">Smart city satna</p>
+                        <a t-att-href="cta_btn_href" class="btn btn-primary mb-2"><t t-esc="cta_btn_text">Explore</t></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </template>
+
+     <record id="website_demo.work_life" model="ir.attachment">
+        <field name="public" eval="True"/>
+        <field name="name">work_life.jpg</field>
+        <field name="type">url</field>
+        <field name="url">/website_demo/static/src/img/work_life.jpg</field>
+    </record>
+
+</odoo>

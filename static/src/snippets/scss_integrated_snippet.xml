@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="scss_integrated_snippet" name="scss snippet">
+       
+        <section class = 'scss_container'>
+            <lable for ='text1' class= 'label1'>name:</lable>
+            <input type='Textfield'  id = 'text1'/>
+        </section>
+        
+    </template>
+
+</odoo>
