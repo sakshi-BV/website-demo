@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+        
+        <t t-name="website_demo.emp_detail">
+                <t t-foreach="data" t-as="record">
+                        <t t-out="record.emp_name"></t><br/>
+                       
+                </t>
+        </t>
+</templates>

@@ -33,11 +33,14 @@
         "static/src/snippets/carousel_static_snippet.xml",
         "static/src/snippets/nav_static_snippet.xml",
         "static/src/snippets/scss_integrated_snippet.xml",
+        "static/src/snippets/dynamic_snippet/dynamic_snippet_temp.xml",
+        "static/src/snippets/dynamic_snippet/dynamic_snippet.xml",
     ],
      'assets': {
        'web.assets_frontend': [
            'website_demo/static/src/scss/custom_styles.scss',
-           'static/src/js/dynamic_snippet.js',
+           'website_demo/static/src/snippets/dynamic_snippet/dynamic_snippet.js',
+           'website_demo/static/src/snippets/dynamic_snippet/dynamic_snippet_qweb.xml'
 
        ]},
       

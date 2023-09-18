@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import http
 
-
 class WebsiteDemo(http.Controller):
     @http.route('/website_demo/website_demo', auth='public')
     def index(self, **kw):
@@ -21,10 +20,15 @@ class WebsiteDemo(http.Controller):
         })
     
 
-    @http.route(['/dynamic/employee/info'], auth="public")
-    def sold_total(self):
-       employee_details = http.request.env['employee.model'].search_read([],['employee_name'])
-       return employee_details
+    # @http.route(['/dynamic/employee/info'], auth="public")
+    # def sold_total(self):
+    #    employee_details = http.request.env['employee.model'].search_read([],['employee_name'])
+    #    return employee_details
 
-
+class EmployeesDetail(http.Controller):
+    @http.route('/employee/model',type="json", method=["POST"], auth='public')
+    def index(self, **kw):
+        emp_details = http.request.env['employee.model'].search_read([])
+        # print(details)
+        return emp_details
   

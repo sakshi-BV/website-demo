@@ -1,9 +1,29 @@
+$default-color : aqua;
+
+@mixin def-label($clr : $default-color){
+    color: $clr;
+}
+
+
 #text1{
     color: red;
-    height: 200px;
+    height: 40px;
 }
 
 .label1{
-    color: red;
-    height: 300px;
+    color:$default-color;
+    height: 40px;
+}
+
+.label2{
+    @include def-label()
+}
+.label3{
+    @include def-label(yellow);
+    height : 50px;
+}
+.label4{
+    @include def-label(rgb(255, 174, 0));
+    height: 100px;
+
 }
