@@ -5,10 +5,10 @@ class Employee(models.Model):
     _description = 'here we have data related employee'
 
     emp_name = fields.Char(string='Employee Name')
-    phone_number = fields.Integer(string='Phone Number')
-    emp_img = fields.Boolean(string = 'Employee Image')
+    phone_number = fields.Char(string='Phone Number')
+    emp_img = fields.Binary(string = 'Employee Image')
     city = fields.Char(string='City')
-    work_experience= fields.Integer(string='Work Experience')
+    work_experience= fields.Char(string='Work Experience')
 
 
 

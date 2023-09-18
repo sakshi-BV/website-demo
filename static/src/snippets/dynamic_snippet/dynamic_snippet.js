@@ -4,7 +4,7 @@ import core from 'web.core'
 
 var Dynamic_Qweb = core.qweb
 publicWidget.registry.DynamicEmployeeCarousel = publicWidget.Widget.extend({
-    selector: '.container',
+    selector: '.Dynamic_container',
 
     start() {
         this._rpc({
