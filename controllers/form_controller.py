@@ -10,3 +10,12 @@ class FormController(http.Controller):
         print(kw)
         http.request.env['employee.model'].create([kw])
         return True
+    
+    # @http.route('/employee/data', auth='public', type='json', method=['POST'])
+    # def form_data(self, **kw):
+    #     user = http.request.env.user
+    #     if user and user.id != http.request.website.user_id.id:
+    #         http.request.env['employee.model'].create([kw])
+    #         return {'success': True}
+    #     else:
+    #         return {'error': 'You must be logged in to submit the data'}

@@ -4,71 +4,104 @@
     <template id="employee_template" name="Employee Details Form">
 
         <t t-call="website.layout">
-            <section class='container'>
-            <t t-set="title">Employee Details Form</t>
+            <section class='container' id="mysection">
+                <t t-set="title">Employee Details Form</t>
 
-            <t t-block="content">
-                <div class="container mt-5">
-                    <h3>Employee Details Form</h3>
-                    <form method="post" class="oe_form_container" id="form_template">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="employee_name" class="form-label">Employee Name</label>
-                                    <input type="text" name="employee_name" class="form-control" id="emp_name"/>
+                <t t-block="content">
+                    <div class="container mt-5">
+                        <h3>Employee Details Form</h3>
+                        <form method="post" class="oe_form_container" id="form_template">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="employee_name" class="form-label">Employee Name</label>
+                                        <input type="text" name="employee_name" class="form-control"
+                                            id="emp_name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city" class="form-label">City</label>
+                                        <input type="text" name="city" class="form-control"
+                                            id="emp_city" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="work_experience" class="form-label">Work
+                                            Experience</label>
+                                        <input type="text" name="work_experience"
+                                            class="form-control" id="emp_work" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone_number" class="form-label">Phone Number</label>
+                                        <input type="text" name="phone_number" class="form-control"
+                                            id="emp_phone" />
+                                    </div>
+                                    <br />
+                                    <button type="button" class="btn btn-primary" id='form_button'>
+                                        Submit</button>
+                                    <br />
                                 </div>
-                                <div class="form-group">
-                                    <label for="city" class="form-label">City</label>
-                                    <input type="text" name="city" class="form-control" id="emp_city"/>
+                            </div>
+                        </form>
+                    </div>
+                </t>
+                <t t-block='FormPopup'>
+                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">xml</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
-                                <div class="form-group">
-                                    <label for="work_experience" class="form-label">Work Experience</label>
-                                    <input type="text" name="work_experience" class="form-control" id="emp_work"/>
+                                <div class="modal-body" id='popup-body'>
+                                    ...
                                 </div>
-                                <div class="form-group">
-                                    <label for="phone_number" class="form-label">Phone Number</label>
-                                    <input type="text" name="phone_number" class="form-control" id="emp_phone"/>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" id='popup-login'>xml</button>
                                 </div>
-                                <br />
-                                <button type="button" class="btn btn-primary" id = 'form_button'>Submit</button>
-                                <br />
                             </div>
                         </div>
-                    </form>
-                </div>
-            </t>
-
-            <t t-block="slider">
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/website_demo/static/src/img/odoo1.jpeg" class="d-block w-100"
-                                alt="Not Available" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/website_demo/static/src/img/odoo2.jpeg" class="d-block w-100"
-                                alt="Available" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/website_demo/static/src/img/odoo3.jpeg" class="d-block w-100"
-                                alt="Available" />
-                        </div>
                     </div>
-                    <button class="carousel-control-prev" type="button"
-                        data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button"
-                        data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </t>
-        </section>
+                </t>
+
+                <t t-block="slider">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/website_demo/static/src/img/odoo1.jpeg"
+                                    class="d-block w-100"
+                                    alt="Not Available" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/website_demo/static/src/img/odoo2.jpeg"
+                                    class="d-block w-100"
+                                    alt="Available" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/website_demo/static/src/img/odoo3.jpeg"
+                                    class="d-block w-100"
+                                    alt="Available" />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+
+                    </div>
+                </t>
+            </section>
         </t>
-        
+
     </template>
 
     <record id="website_demo.odoo1_img" model="ir.attachment">
