@@ -10,7 +10,7 @@
             <t t-block="content">
                 <div class="container mt-5">
                     <h3>Employee Details Form</h3>
-                    <form method="post" class="oe_form_container" id = 'form_template'>
+                    <form method="post" class="oe_form_container" id="form_template">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -42,17 +42,16 @@
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-
-                            <img src="web/image/website_demo.odoo1_img" class="d-block w-100"
+                            <img src="/website_demo/static/src/img/odoo1.jpeg" class="d-block w-100"
                                 alt="Not Available" />
                         </div>
                         <div class="carousel-item">
-                            <img src="web/image/website_demo.odoo1_img" class="d-block w-100"
-                                alt="Not Available" />
+                            <img src="/website_demo/static/src/img/odoo2.jpeg" class="d-block w-100"
+                                alt="Available" />
                         </div>
                         <div class="carousel-item">
-                            <img src="web/image/website_demo.odoo1_img" class="d-block w-100"
-                                alt="Not Available" />
+                            <img src="/website_demo/static/src/img/odoo3.jpeg" class="d-block w-100"
+                                alt="Available" />
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button"
@@ -71,6 +70,7 @@
         </t>
         
     </template>
+
     <record id="website_demo.odoo1_img" model="ir.attachment">
         <field name="public" eval="True" />
         <field name="name">odoo1.jpeg</field>

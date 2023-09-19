@@ -7,9 +7,13 @@ publicWidget.registry.FormDataLoad = publicWidget.Widget.extend({
     events : {
         'click #form_button' : 'on_submit', 
     },
+    
     on_submit(){
+        console.log(this.getSession().user,'aaaaaaaaaaaaaaaa')
         console.log(this.$el)
+        debugger
         let emp_name = this.$el.find('input#emp_name')[0].value
+        // let emp_name = this.$el.find('input#emp_name')[0].value
         let emp_city = this.$el.find('input#emp_city')[0].value
         let emp_work = this.$el.find('input#emp_work')[0].value
         let emp_phone = this.$el.find('input#emp_phone')[0].value
